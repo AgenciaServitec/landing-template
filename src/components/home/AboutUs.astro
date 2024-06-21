@@ -1,5 +1,12 @@
 ---
+import { Astro } from "astro/env";
+import { isEmpty } from "lodash-es";
 
+const {
+  title = undefined,
+  description = undefined,
+  imgUrl = undefined,
+} = Astro.props;
 ---
 
 <main>
@@ -8,7 +15,7 @@
       <img src="../../../images/about-us-banner.webp" alt="Sobre nosotros" />
     </div>
     <div class="about-us__text">
-      <h2 class="about-us__text-title">Sobre nosotros</h2>
+      {!isEmpty(title) && <h2 class="about-us__text-title">{title}</h2>}
       <p class="about-us__text-description">
         Nos dedicamos a transformar la manera en que experimentas el
         entretenimiento y las presentaciones visuales. Desde nuestros comienzos,
