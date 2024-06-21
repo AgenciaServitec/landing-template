@@ -6,12 +6,15 @@ export const LT_SETTINGS = {
   HEADER: {},
   BODY: {
     PRINCIPAL_SECTION: {
-      bannerImgUrl: "",
+      bannerImgUrl: "/images/principal-banner.webp",
+      bannerImgAlt: "Proyectores Servitec"
     },
     ABOUT_US: {
       title: "HOLA A TODOS",
-      description: "",
-      imgUrl: "",
+      description:
+        "Nos dedicamos a transformar la manera en que experimentas el entretenimiento y las presentaciones visuales. Desde nuestros comienzos, hemos tenido una misión clara: proporcionar soluciones de proyección de alta calidad que se adapten a las necesidades de nuestros clientes, ya sea en el hogar, la oficina, o cualquier otro entorno.",
+      imgUrl: "/images/about-us-banner.webp",
+      imgAlt: "Sobre nosotros",
     },
     SERVICES: {
       title: "",
