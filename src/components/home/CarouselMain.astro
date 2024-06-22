@@ -23,8 +23,8 @@ const { slides = [] } = Astro.props;
 <div class="swiper" id="mySwiper">
   <div class="swiper-wrapper">
     {
-      slides.map((slide, index) => (
-        <div key={index} class="swiper-slide">
+      slides.map((slide) => (
+        <div class="swiper-slide">
           <img src={slide.imageUrl} alt={slide.imageAlt} />
         </div>
       ))

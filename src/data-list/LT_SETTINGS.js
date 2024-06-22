@@ -3,7 +3,30 @@ export const LT_SETTINGS = {
     title: "Landing Template",
   },
   TOP_HEADER: {},
-  HEADER: {},
+  HEADER: {
+    logo: {
+      imageUrl: "/images/logo.webp",
+      imageAlt: "Image1",
+    },
+    navbar: [
+      {
+        label: "Inicio",
+        value: "/",
+      },
+      {
+        label: "Nosotros",
+        value: "/about-us",
+      },
+      {
+        label: "Services",
+        value: "/services",
+      },
+    ],
+    itemContact: {
+      label: "Contacto",
+      value: "/contact",
+    },
+  },
   BODY: {
     PRINCIPAL_SECTION: {
       banner: {

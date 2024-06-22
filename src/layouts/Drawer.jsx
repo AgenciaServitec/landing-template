@@ -1,6 +1,6 @@
 import { useVisibleDrawer } from "../hooks/index.js";
 
-const Drawer = ({ children }) => {
+const Drawer = ({ children, dataNavbar }) => {
   const { visibleDrawer, showDrawer, hiddenDrawer } = useVisibleDrawer();
 
   return (
@@ -30,20 +30,16 @@ const Drawer = ({ children }) => {
         <div onClick={hiddenDrawer}></div>
         <article style={{ background: "#13151a", padding: "2em 1em" }}>
           <ul style={{ listStyle: "none" }}>
-            <ItemLi text="Inicio" onHiddenDrawer={hiddenDrawer} />
+            {dataNavbar.navbar.map((item) => (
+              <ItemLi
+                text={item.label}
+                path={item.value}
+                onHiddenDrawer={hiddenDrawer}
+              />
+            ))}
             <ItemLi
-              text="Nosotros"
-              path="/about-us"
-              onHiddenDrawer={hiddenDrawer}
-            />
-            <ItemLi
-              text="Productos"
-              path="/products"
-              onHiddenDrawer={hiddenDrawer}
-            />
-            <ItemLi
-              text="Contacto"
-              path="/contact"
+              text={dataNavbar.itemContact.label}
+              path={dataNavbar.itemContact.value}
               onHiddenDrawer={hiddenDrawer}
             />
           </ul>

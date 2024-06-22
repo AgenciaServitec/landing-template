@@ -2,6 +2,8 @@
 import Icon from "astro-icon";
 import { IconFontAwesome } from "../components";
 import Drawer from "./Drawer";
+import { LT_SETTINGS } from "../data-list";
+const { HEADER } = LT_SETTINGS;
 ---
 
 <script>
@@ -23,9 +25,9 @@ import Drawer from "./Drawer";
 <header id="header-item" class="header-absolute">
   <div class="img-logo">
     <a href="/" rel="noreferrer"
-    ><img src="./images/logo.webp" alt="Proyectores Servitec"/></a
+      ><img src={HEADER?.logo?.imageUrl} alt={HEADER?.logo?.imageAlt} /></a
     >
-    <Drawer client:visible>
+    <Drawer client:visible dataNavbar={HEADER}>
       <div class="item-menu-button">
         <IconFontAwesome
           width="30px"
@@ -37,13 +39,17 @@ import Drawer from "./Drawer";
   </div>
   <div class="item-menu">
     <ul>
-      <li><a href="/">Inicio</a></li>
-      <li><a href="/about-us">Nosotros</a></li>
-      <li><a href="/services">Services</a></li>
+      {
+        HEADER.navbar.map((item) => (
+          <li>
+            <a href={item.value}>{item.label}</a>
+          </li>
+        ))
+      }
       <li>
-        <a href="/contact" class="anchor-icon">
+        <a href={HEADER.itemContact.value} class="anchor-icon">
           <Icon pack="mdi" name="phone" size={19} />
-          Contacto
+          {HEADER.itemContact.label}
         </a>
       </li>
     </ul>
