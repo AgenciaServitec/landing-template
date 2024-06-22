@@ -5,8 +5,10 @@ import {
   CarouselProducts,
   SectionWrapper,
   AboutUsComponent,
+  CarouselMain,
 } from "../components";
 import BrandsSection from "../components/home/BrandsSection.astro";
+import { isEmpty } from "lodash-es";
 
 const { BODY } = LT_SETTINGS;
 ---
@@ -14,10 +16,19 @@ const { BODY } = LT_SETTINGS;
 <BaseLayout>
   <main>
     <div class="banner-wrapper">
-      <img
-        src={BODY.PRINCIPAL_SECTION?.bannerImgUrl}
-        alt={BODY.PRINCIPAL_SECTION?.bannerImgAlt}
-      />
+      {
+        BODY.PRINCIPAL_SECTION?.banner?.bannerImgUrl && (
+          <img
+            src={BODY.PRINCIPAL_SECTION?.banner.bannerImgUrl}
+            alt={BODY.PRINCIPAL_SECTION?.banner.bannerImgAlt}
+          />
+        )
+      }
+      {
+        !isEmpty(BODY.PRINCIPAL_SECTION?.carousel?.images[0].imageUrl) && (
+          <CarouselMain slides={BODY.PRINCIPAL_SECTION?.carousel.images} />
+        )
+      }
     </div>
 
     <SectionWrapper>

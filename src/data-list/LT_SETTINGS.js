@@ -6,8 +6,18 @@ export const LT_SETTINGS = {
   HEADER: {},
   BODY: {
     PRINCIPAL_SECTION: {
-      bannerImgUrl: "/images/principal-banner.webp",
-      bannerImgAlt: "Proyectores Servitec"
+      banner: {
+        bannerImgUrl: "/images/principal-banner.webp",
+        bannerImgAlt: "Proyectores Servitec",
+      },
+      carousel: {
+        images: [
+          {
+            imageUrl: "",
+            imageAlt: "Image1",
+          },
+        ],
+      },
     },
     ABOUT_US: {
       title: "HOLA A TODOS",
