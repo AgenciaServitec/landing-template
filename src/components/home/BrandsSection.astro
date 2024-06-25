@@ -17,6 +17,19 @@ const {list = undefined } = Astro.props;
 
     </ul>
   </div>
+  <div class="brands-wrapper__container">
+    <ul class="brands-list">
+      {
+          !isEmpty(list) &&
+          list.map((brands, index) => (
+              <li key={index} class="brands-list__item">
+                <img src={brands.imageUrl} alt={brands.name} />
+              </li>
+          ))
+      }
+
+    </ul>
+  </div>
 </div>
 
 <style lang="scss">
