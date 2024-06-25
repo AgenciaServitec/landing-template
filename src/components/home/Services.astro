@@ -1,10 +1,7 @@
 ---
 import CardProduct from "../ui/CardProduct.astro";
 import { isEmpty } from "lodash-es";
-const {
-  title = undefined,
-  list = undefined,
-} = Astro.props;
+const { title = undefined, list = undefined } = Astro.props;
 ---
 
 <section>
@@ -13,8 +10,13 @@ const {
   </div>
   <div class="card-list">
     {
-        !isEmpty(list) && list.map((product, index) => (
-            <CardProduct key={index} imagePath={product.imgUrl} name={product.name} />
+      !isEmpty(list) &&
+        list.map((product, index) => (
+          <CardProduct
+            key={index}
+            imagePath={product.imgUrl}
+            imageAlt={product.name}
+          />
         ))
     }
   </div>

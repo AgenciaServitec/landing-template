@@ -1,12 +1,21 @@
 ---
-const { name, imagePath } = Astro.props;
+import { isEmpty } from "lodash-es";
+
+const { name, imagePath, imageAlt } = Astro.props;
 ---
 
 <article class="product">
   <a href="/contact">
     <div class="product__img">
-      <img src={imagePath} alt={name} />
+      <img src={imagePath} alt={imageAlt} />
     </div>
+    {
+      !isEmpty(name) && (
+        <div class="product__text">
+          <h3>{name}</h3>
+        </div>
+      )
+    }
   </a>
 </article>
 
@@ -23,6 +32,15 @@ const { name, imagePath } = Astro.props;
     flex-direction: column;
     gap: 0.85rem;
 
+    a {
+      text-decoration: none;
+      text-align: center;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+    }
+
     &__img {
       width: 100%;
       height: auto;
@@ -32,6 +50,10 @@ const { name, imagePath } = Astro.props;
         height: 100%;
         object-fit: cover;
       }
+    }
+
+    &__text {
+      padding: 0.5em;
     }
   }
 </style>

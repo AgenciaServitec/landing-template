@@ -1,25 +1,21 @@
 ---
 import CardProduct from "../ui/CardProduct.astro";
-import { LT_SETTINGS } from "../../data-list";
 import { isEmpty } from "lodash-es";
-const { BODY } = LT_SETTINGS;
+const { data } = Astro.props;
 ---
 
 <section>
   <div class="wrapper-title">
-    {
-      !isEmpty(BODY.PRODUCTS.title) && (
-        <h2 class="color__primary">{BODY.PRODUCTS.title}</h2>
-      )
-    }
+    {!isEmpty(data.title) && <h2 class="color__primary">{data.title}</h2>}
   </div>
   <div class="card-list">
     {
-      BODY.PRODUCTS.list.map((product, index) => (
+      data.list.map((product, index) => (
         <CardProduct
           key={index}
           imagePath={product.imgUrl}
-          name={product.imgAlt}
+          imageAlt={product.name}
+          name={product.name}
         />
       ))
     }

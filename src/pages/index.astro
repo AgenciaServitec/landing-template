@@ -42,17 +42,17 @@ const { META, BODY } = LT_SETTINGS;
     {
       BODY.PRODUCTS.title && (
         <SectionWrapper>
-          <ProductsSection />
+          <ProductsSection data={BODY.PRODUCTS} />
         </SectionWrapper>
       )
     }
 
     <SectionWrapper>
       <Services
-      title={BODY.SERVICES?.title}
-      list={BODY.SERVICES?.list}
-      imgUrl={BODY.SERVICES?.imgUrl}
-      name={BODY.SERVICES?.name}
+        title={BODY.SERVICES?.title}
+        list={BODY.SERVICES?.list}
+        imgUrl={BODY.SERVICES?.imgUrl}
+        name={BODY.SERVICES?.name}
       />
     </SectionWrapper>
 

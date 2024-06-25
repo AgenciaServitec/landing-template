@@ -58,17 +58,14 @@ export const LT_BODY = {
     list: [
       {
         imgUrl: "/images/se-apaga-y-reinicia.webp",
-        imgAlt: "Image 1",
         name: "Image 1",
       },
       {
         imgUrl: "/images/se-apaga-y-reinicia.webp",
-        imgAlt: "Image 2",
         name: "Image 2",
       },
       {
         imgUrl: "/images/se-apaga-y-reinicia.webp",
-        imgAlt: "Image 3",
         name: "Image 3",
       },
     ],
