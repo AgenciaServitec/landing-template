@@ -3,8 +3,12 @@ import { LT_FOOTER } from "./LT_FOOTER.js";
 import { LT_BODY } from "./LT_BODY.js";
 
 export const LT_SETTINGS = {
-  PROJECT_NAME: "Landing template - Servitec",
-  CREATE_BY: "Agencia Servitec",
+  PROJECT: {
+    name: "Landing template - Servitec",
+    logo: "",
+    slogan:
+      "Estamos aquí para ayudarte a encontrar el proyector perfecto para tus necesidades. No dudes en ponerte en contacto con nosotros para obtener más información sobre nuestros productos y servicios.",
+  },
   UI_DESIGN: {
     COLORS: {
       primary: "",
@@ -24,4 +28,5 @@ export const LT_SETTINGS = {
   HEADER: LT_HEADER,
   BODY: LT_BODY,
   FOOTER: LT_FOOTER,
+  CREATE_BY: "Agencia Servitec",
 };
