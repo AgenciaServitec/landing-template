@@ -1,70 +1,68 @@
 ---
-const brands = [
-  {
-    name: "BenQ",
-    imageUrl: "./images/logo-benq.webp",
-  },
-  {
-    name: "Epson",
-    imageUrl: "./images/logo-epson.webp",
-  },
-  {
-    name: "inFocus",
-    imageUrl: "./images/logo-infocus.webp",
-  },
-  {
-    name: "LG",
-    imageUrl: "./images/logo-lg.webp",
-  },
-  {
-    name: "Optoma",
-    imageUrl: "./images/logo-optoma.webp",
-  },
-  {
-    name: "Sony",
-    imageUrl: "./images/logo-sony.webp",
-  },
-];
+import { isEmpty } from "lodash-es";
+const {list = undefined } = Astro.props;
 ---
 
 <div class="brands-wrapper">
-  <ul class="brands">
-    {
-      brands.map((brand, index) => (
-        <li key={index} class="brand">
-          <img src={brand.imageUrl} alt={brand.name} />
-        </li>
-      ))
-    }
-  </ul>
+  <div class="brands-wrapper__container">
+    <ul class="brands-list">
+      {
+          !isEmpty(list) &&
+          list.map((brands, index) => (
+              <li key={index} class="brands-list__item">
+                <img src={brands.imageUrl} alt={brands.name} />
+              </li>
+          ))
+      }
+
+    </ul>
+  </div>
 </div>
 
 <style lang="scss">
+  @keyframes slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
   .brands-wrapper {
-    padding: 3em 1em 1em 1em;
+    overflow: hidden;
+    white-space: nowrap;
 
-    .brands {
-      list-style: none;
-      padding: 0;
-      margin: 0;
+    &:hover .brands-list {
+      animation-play-state: paused;
+    }
+
+    &__container {
+      display: inline-block;
+      margin-left: 1em;
+    }
+  }
+
+  .brands-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1em;
+    max-width: 100%;
+    animation: 30s slide infinite linear;
+
+    &__item {
+      background: #fff;
+      border-radius: 1em;
+      padding: 0.2em 1em;
       display: flex;
-      justify-content: center;
-      gap: 1em;
-      max-width: 100%;
-      overflow-x: scroll;
+      place-items: center;
 
-      .brand {
-        background: #fff;
-        border-radius: 1em;
-        padding: 0.2em 1em;
-        display: flex;
-        place-items: center;
-
-        img {
-          width: 8em;
-          margin: auto;
-          object-fit: contain;
-        }
+      img {
+        width: 8em;
+        margin: auto;
+        object-fit: contain;
       }
     }
   }
