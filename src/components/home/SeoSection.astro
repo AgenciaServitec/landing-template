@@ -4,9 +4,9 @@ import { isEmpty } from "lodash-es";
 const { data } = Astro.props;
 ---
 
-<main>
+<div class="seo-section">
   {!isEmpty(data.title) && <h1>{data.title}</h1>}
-  <section class="seo-section">
+  <div class="seo-section__description">
     <div class="seo-section__img">
       {
         !isEmpty(data.image.imageUrl) && (
@@ -17,11 +17,11 @@ const { data } = Astro.props;
     <div class="seo-section__text">
       {!isEmpty(data.description) && <p>{data.description}</p>}
     </div>
-  </section>
-</main>
+  </div>
+</div>
 
 <style lang="scss">
-  main {
+  .seo-section {
     width: 100%;
     padding: 2em 5em;
 
@@ -45,37 +45,33 @@ const { data } = Astro.props;
       }
     }
 
-    .seo-section {
+    &__description {
       width: 100%;
       padding: 0 10rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1em;
-
-      &__img {
-        img {
-          width: 100%;
-          height: auto;
-          border-radius: 1em;
-          object-fit: cover;
-        }
-      }
-
-      &__text {
-        text-align: left;
-        font-size: 1.2rem;
+      @media (max-width: 720px) {
+        padding: 0 1rem;
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 720px) {
-      .seo-section {
-        padding: 0 1rem;
-        grid-template-columns: 1fr;
+    &__img {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 1em;
+        object-fit: cover;
+      }
+    }
 
-        &__text {
-          text-align: center;
-          font-size: 1.2rem;
-        }
+    &__text {
+      text-align: left;
+      font-size: 1.2rem;
+      @media (max-width: 720px) {
+        text-align: center;
+        font-size: 1.2rem;
       }
     }
   }
