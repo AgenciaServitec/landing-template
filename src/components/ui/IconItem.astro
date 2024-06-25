@@ -12,7 +12,7 @@ interface Props {
 const {
   title = "967787227",
   path,
-  span = "Contáctanos",
+  description = "",
   href = "#",
   isAnchor = false,
 } = Astro.props;
@@ -25,10 +25,10 @@ const {
   {
     isAnchor ? (
       <a href={href} target="_blank">
-        {span}
+        {description}
       </a>
     ) : (
-      <span>{span}</span>
+      <span>{description}</span>
     )
   }
 </div>
