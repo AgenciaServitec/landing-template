@@ -1,5 +1,6 @@
 export const LT_BODY = {
   PRINCIPAL_SECTION: {
+    type: "banner",
     banner: {
       bannerImgUrl: "/images/principal-banner.webp",
       bannerImgAlt: "Proyectores Servitec",
