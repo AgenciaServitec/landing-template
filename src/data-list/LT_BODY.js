@@ -21,7 +21,7 @@ export const LT_BODY = {
     imgAlt: "Sobre nosotros",
   },
   SERVICES: {
-    title: "",
+    title: "Algunos de nuestros servicios",
     list: [
       {
         imgUrl: "./images/imagen-borrosa.webp",
