@@ -2,19 +2,17 @@
 import { IconItem, Divider } from "../components";
 import { LT_SETTINGS } from "../data-list";
 
-const { FOOTER } = LT_SETTINGS;
+const { FOOTER, PROJECT } = LT_SETTINGS;
 ---
 
 <footer class="footer">
   <Divider />
 
-  <img src="./images/logo.webp" alt="logo" />
+  <img src={PROJECT.logo} alt="logo" />
 
   <span class="slogan-description">
-    Estamos aquí para ayudarte a encontrar el proyector perfecto para tus
-    necesidades. No dudes en ponerte en contacto con nosotros para obtener más
-    información sobre nuestros productos y servicios.</span
-  >
+    {PROJECT.slogan}
+  </span>
 
   <section class="icons-list">
     {
