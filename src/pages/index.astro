@@ -7,6 +7,7 @@ import {
   AboutUsComponent,
   CarouselMain,
   ProductsSection,
+  SeoSection,
 } from "../components";
 import BrandsSection from "../components/home/BrandsSection.astro";
 
@@ -31,12 +32,7 @@ const { META, BODY } = LT_SETTINGS;
     </div>
 
     <SectionWrapper>
-      <AboutUsComponent
-        title={BODY.ABOUT_US?.title}
-        description={BODY.ABOUT_US?.description}
-        imgUrl={BODY.ABOUT_US?.imgUrl}
-        imgAlt={BODY.ABOUT_US?.imgAlt}
-      />
+      <SeoSection data={BODY.SEO_SECTION} />
     </SectionWrapper>
 
     {
