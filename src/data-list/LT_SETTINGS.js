@@ -3,6 +3,8 @@ import { LT_FOOTER } from "./LT_FOOTER.js";
 import { LT_BODY } from "./LT_BODY.js";
 
 export const LT_SETTINGS = {
+  PROJECT_NAME: "Landing template - Servitec",
+  CREATE_BY: "Agencia Servitec",
   UI_DESIGN: {
     COLORS: {
       primary: "",
