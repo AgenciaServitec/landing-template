@@ -1,11 +1,17 @@
 ---
 import { BaseLayout } from "../../layouts";
 import { AboutUsComponent } from "../../components";
+import { LT_SETTINGS } from "../../data-list";
+const { BODY } = LT_SETTINGS;
 ---
 
 <BaseLayout title="Nosotros">
   <main>
-    <AboutUsComponent />
+    <AboutUsComponent
+      title={BODY.ABOUT_US?.title}
+      description={BODY.ABOUT_US?.description}
+      imgUrl={BODY.ABOUT_US?.imgUrl}
+    />
   </main>
 </BaseLayout>
 

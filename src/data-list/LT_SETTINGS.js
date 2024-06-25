@@ -3,15 +3,51 @@ export const LT_SETTINGS = {
     title: "Landing Template",
   },
   TOP_HEADER: {},
-  HEADER: {},
+  HEADER: {
+    logo: {
+      imageUrl: "/images/logo.webp",
+      imageAlt: "Image1",
+    },
+    navbar: [
+      {
+        label: "Inicio",
+        value: "/",
+      },
+      {
+        label: "Nosotros",
+        value: "/about-us",
+      },
+      {
+        label: "Services",
+        value: "/services",
+      },
+    ],
+    itemContact: {
+      label: "Contacto",
+      value: "/contact",
+    },
+  },
   BODY: {
     PRINCIPAL_SECTION: {
-      bannerImgUrl: "",
+      banner: {
+        bannerImgUrl: "/images/principal-banner.webp",
+        bannerImgAlt: "Proyectores Servitec",
+      },
+      carousel: {
+        images: [
+          {
+            imageUrl: "",
+            imageAlt: "Image1",
+          },
+        ],
+      },
     },
     ABOUT_US: {
       title: "HOLA A TODOS",
-      description: "",
-      imgUrl: "",
+      description:
+        "Nos dedicamos a transformar la manera en que experimentas el entretenimiento y las presentaciones visuales. Desde nuestros comienzos, hemos tenido una misión clara: proporcionar soluciones de proyección de alta calidad que se adapten a las necesidades de nuestros clientes, ya sea en el hogar, la oficina, o cualquier otro entorno.",
+      imgUrl: "/images/about-us-banner.webp",
+      imgAlt: "Sobre nosotros",
     },
     SERVICES: {
       title: "",

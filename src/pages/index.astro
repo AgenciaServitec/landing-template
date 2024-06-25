@@ -5,6 +5,7 @@ import {
   CarouselProducts,
   SectionWrapper,
   AboutUsComponent,
+  CarouselMain,
 } from "../components";
 import BrandsSection from "../components/home/BrandsSection.astro";
 
@@ -14,7 +15,16 @@ const { BODY } = LT_SETTINGS;
 <BaseLayout>
   <main>
     <div class="banner-wrapper">
-      <img src="./images/principal-banner.webp" alt="Proyectores Servitec" />
+      {
+        BODY.PRINCIPAL_SECTION?.banner?.bannerImgUrl ? (
+          <img
+            src={BODY.PRINCIPAL_SECTION?.banner.bannerImgUrl}
+            alt={BODY.PRINCIPAL_SECTION?.banner.bannerImgAlt}
+          />
+        ) : (
+          <CarouselMain slides={BODY.PRINCIPAL_SECTION?.carousel.images} />
+        )
+      }
     </div>
 
     <SectionWrapper>
@@ -22,6 +32,7 @@ const { BODY } = LT_SETTINGS;
         title={BODY.ABOUT_US?.title}
         description={BODY.ABOUT_US?.description}
         imgUrl={BODY.ABOUT_US?.imgUrl}
+        imgAlt={BODY.ABOUT_US?.imgAlt}
       />
     </SectionWrapper>
 
