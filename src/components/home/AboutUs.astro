@@ -10,31 +10,21 @@ const {
 } = Astro.props;
 ---
 
-<main>
-  <section class="about-us">
-    <div class="about-us__img">
-      {!isEmpty(imgUrl) && <img src={imgUrl} alt={imgAlt} />}
-    </div>
-    <div class="about-us__text">
-      {!isEmpty(title) && <h2 class="about-us__text-title">{title}</h2>}
-      {
-        !isEmpty(description) && (
-          <p class="about-us__text-description">{description}</p>
-        )
-      }
-    </div>
-  </section>
-</main>
+<section class="about-us">
+  <div class="about-us__img">
+    {!isEmpty(imgUrl) && <img src={imgUrl} alt={imgAlt} />}
+  </div>
+  <div class="about-us__text">
+    {!isEmpty(title) && <h2 class="about-us__text-title">{title}</h2>}
+    {
+      !isEmpty(description) && (
+        <p class="about-us__text-description">{description}</p>
+      )
+    }
+  </div>
+</section>
 
 <style lang="scss">
-  main {
-    width: 100%;
-    padding: 2em 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   .about-us {
     width: 100%;
     display: flex;

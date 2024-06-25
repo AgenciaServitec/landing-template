@@ -14,7 +14,7 @@ export const LT_BODY = {
     },
   },
   ABOUT_US: {
-    title: "HOLA A TODOS",
+    title: "sobre nosotros",
     description:
       "Nos dedicamos a transformar la manera en que experimentas el entretenimiento y las presentaciones visuales. Desde nuestros comienzos, hemos tenido una misión clara: proporcionar soluciones de proyección de alta calidad que se adapten a las necesidades de nuestros clientes, ya sea en el hogar, la oficina, o cualquier otro entorno.",
     imgUrl: "/images/about-us-banner.webp",
