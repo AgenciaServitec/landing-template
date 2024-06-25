@@ -80,4 +80,49 @@ export const LT_BODY = {
       },
     ],
   },
+
+  BRANDS:{
+    list:[
+      {
+        name: "BenQ",
+        imageUrl: "./images/logo-benq.webp",
+      },
+      {
+        name: "Epson",
+        imageUrl: "./images/logo-epson.webp",
+      },
+      {
+        name: "inFocus",
+        imageUrl: "./images/logo-infocus.webp",
+      },
+      {
+        name: "LG",
+        imageUrl: "./images/logo-lg.webp",
+      },
+      {
+        name: "Optoma",
+        imageUrl: "./images/logo-optoma.webp",
+      },
+      {
+        name: "Sony",
+        imageUrl: "./images/logo-sony.webp",
+      },
+      {
+        name: "Hitachi",
+        imageUrl: "./images/logo-hitachi.webp",
+      },
+      {
+        name: "ViewSonic",
+        imageUrl: "./images/logo-viewsonic.webp",
+      },
+      {
+        name: "Acer",
+        imageUrl: "./images/logo-acer.webp",
+      },
+      {
+        name: "Panasonic",
+        imageUrl: "./images/logo-panasonic.webp",
+      },
+    ],
+  },
 };
