@@ -30,8 +30,9 @@ const Drawer = ({ children, dataNavbar }) => {
         <div onClick={hiddenDrawer}></div>
         <article style={{ background: "#13151a", padding: "2em 1em" }}>
           <ul style={{ listStyle: "none" }}>
-            {dataNavbar.navbar.map((item) => (
+            {dataNavbar.navbar.map((item, index) => (
               <ItemLi
+                key={index}
                 text={item.label}
                 path={item.value}
                 onHiddenDrawer={hiddenDrawer}

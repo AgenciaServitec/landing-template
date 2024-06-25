@@ -16,12 +16,14 @@ const { META, BODY } = LT_SETTINGS;
   <main>
     <div class="banner-wrapper">
       {
-        BODY.PRINCIPAL_SECTION?.banner?.bannerImgUrl ? (
+        BODY.PRINCIPAL_SECTION?.banner && (
           <img
-            src={BODY.PRINCIPAL_SECTION?.banner.bannerImgUrl}
-            alt={BODY.PRINCIPAL_SECTION?.banner.bannerImgAlt}
+            src={BODY.PRINCIPAL_SECTION.banner.bannerImgUrl}
+            alt={BODY.PRINCIPAL_SECTION.banner.bannerImgAlt}
           />
-        ) : (
+        )
+      }{
+        BODY.PRINCIPAL_SECTION?.carousel && (
           <CarouselMain slides={BODY.PRINCIPAL_SECTION?.carousel.images} />
         )
       }
