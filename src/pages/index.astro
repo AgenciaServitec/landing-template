@@ -2,7 +2,7 @@
 import { BaseLayout } from "../layouts";
 import { LT_SETTINGS } from "../data-list";
 import {
-  CarouselProducts,
+  Services,
   SectionWrapper,
   AboutUsComponent,
   CarouselMain,
@@ -37,7 +37,12 @@ const { META, BODY } = LT_SETTINGS;
     </SectionWrapper>
 
     <SectionWrapper>
-      <CarouselProducts />
+      <Services
+      title={BODY.SERVICES?.title}
+      list={BODY.SERVICES?.list}
+      imgUrl={BODY.SERVICES?.imgUrl}
+      name={BODY.SERVICES?.name}
+      />
     </SectionWrapper>
 
     <SectionWrapper>
