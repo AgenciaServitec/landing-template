@@ -21,6 +21,15 @@ export const LT_BODY = {
     imgUrl: "/images/about-us-banner.webp",
     imgAlt: "Sobre nosotros",
   },
+  SEO_SECTION: {
+    title: "Venta de lámparas de alta calidad",
+    description:
+      "Ofrecemos lámparas de proyectores de alta calidad y larga duración. Compatibles con varias marcas, con precios competitivos y envío rápido. Mejore su proyección con nuestro soporte especializado.",
+    image: {
+      imageUrl: "/images/about-us-banner.webp",
+      imageAlt: "Image 1",
+    },
+  },
   SERVICES: {
     title: "Algunos de nuestros servicios",
     list: [
