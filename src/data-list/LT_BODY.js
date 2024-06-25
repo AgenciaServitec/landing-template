@@ -54,6 +54,20 @@ export const LT_BODY = {
     ],
   },
   PRODUCTS: {
-    title: "",
+    title: "Productos",
+    list: [
+      {
+        imgUrl: "/images/se-apaga-y-reinicia.webp",
+        name: "Image 1",
+      },
+      {
+        imgUrl: "/images/se-apaga-y-reinicia.webp",
+        name: "Image 2",
+      },
+      {
+        imgUrl: "/images/se-apaga-y-reinicia.webp",
+        name: "Image 3",
+      },
+    ],
   },
 };
