@@ -40,8 +40,8 @@ const { HEADER } = LT_SETTINGS;
   <div class="item-menu">
     <ul>
       {
-        HEADER.navbar.map((item) => (
-          <li>
+        HEADER.navbar.map((item, index) => (
+          <li key={index}>
             <a href={item.value}>{item.label}</a>
           </li>
         ))

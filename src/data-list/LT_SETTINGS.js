@@ -1,116 +1,25 @@
+import { LT_HEADER } from "./LT_HEADER.js";
+import { LT_FOOTER } from "./LT_FOOTER.js";
+import { LT_BODY } from "./LT_BODY.js";
+
 export const LT_SETTINGS = {
+  UI_DESIGN: {
+    COLORS: {
+      primary: "",
+      secondary: "",
+
+      bg: "",
+      color: "",
+    },
+  },
   META: {
     title: "Landing Template",
+    logo: "./images/logo.png",
+    description:
+      "Estamos aquí para ayudarte a encontrar el proyector perfecto para tus necesidades. No dudes en ponerte en contacto con nosotros para obtener más información sobre nuestros productos y servicios.",
   },
   TOP_HEADER: {},
-  HEADER: {
-    logo: {
-      imageUrl: "/images/logo.webp",
-      imageAlt: "Image1",
-    },
-    navbar: [
-      {
-        label: "Inicio",
-        value: "/",
-      },
-      {
-        label: "Nosotros",
-        value: "/about-us",
-      },
-      {
-        label: "Services",
-        value: "/services",
-      },
-    ],
-    itemContact: {
-      label: "Contacto",
-      value: "/contact",
-    },
-  },
-  BODY: {
-    PRINCIPAL_SECTION: {
-      banner: {
-        bannerImgUrl: "/images/principal-banner.webp",
-        bannerImgAlt: "Proyectores Servitec",
-      },
-      carousel: {
-        images: [
-          {
-            imageUrl: "",
-            imageAlt: "Image1",
-          },
-        ],
-      },
-    },
-    ABOUT_US: {
-      title: "HOLA A TODOS",
-      description:
-        "Nos dedicamos a transformar la manera en que experimentas el entretenimiento y las presentaciones visuales. Desde nuestros comienzos, hemos tenido una misión clara: proporcionar soluciones de proyección de alta calidad que se adapten a las necesidades de nuestros clientes, ya sea en el hogar, la oficina, o cualquier otro entorno.",
-      imgUrl: "/images/about-us-banner.webp",
-      imgAlt: "Sobre nosotros",
-    },
-    SERVICES: {
-      title: "",
-      list: [
-        {
-          imgUrl: "./images/imagen-borrosa.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/imagen-con-puntos.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/imagen-distorsionada.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/lampara-no-funciona.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/mensaje-sin-senal.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/proyector-sobrecalienta.webp",
-          name: "",
-        },
-        {
-          imgUrl: "./images/se-apaga-y-reinicia.webp",
-          name: "",
-        },
-      ],
-    },
-    PRODUCTS: {
-      title: "",
-    },
-  },
-  FOOTER: {
-    CONTACT_DATA: {
-      items: [
-        {
-          path: "M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z",
-          title: "Contáctanos",
-          description: "+51 941 801 827 / +51 972 252 744",
-        },
-        {
-          path: "M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z",
-          title: "Ubicación",
-          description:
-            "Ca. Nestor Bermudez 113, Esquina con Av. Fernando Teran, Chorrillos - Lima",
-        },
-        {
-          path: "M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z",
-          title: "Email",
-          description: "contactos@servitec-peru.com",
-        },
-        {
-          path: "M256 0a256 256 0 1 1 0 512A256 256 0 1 1 256 0zM232 120V256c0 8 4 15.5 10.7 20l96 64c11 7.4 25.9 4.4 33.3-6.7s4.4-25.9-6.7-33.3L280 243.2V120c0-13.3-10.7-24-24-24s-24 10.7-24 24z",
-          title: "Lunes - Viernes",
-          description: "09:00 - 18:00",
-        },
-      ],
-    },
-  },
+  HEADER: LT_HEADER,
+  BODY: LT_BODY,
+  FOOTER: LT_FOOTER,
 };
