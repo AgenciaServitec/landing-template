@@ -6,6 +6,7 @@ import {
   SectionWrapper,
   AboutUsComponent,
   CarouselMain,
+  ProductsSection,
 } from "../components";
 import BrandsSection from "../components/home/BrandsSection.astro";
 
@@ -37,6 +38,14 @@ const { META, BODY } = LT_SETTINGS;
         imgAlt={BODY.ABOUT_US?.imgAlt}
       />
     </SectionWrapper>
+
+    {
+      BODY.PRODUCTS.title && (
+        <SectionWrapper>
+          <ProductsSection />
+        </SectionWrapper>
+      )
+    }
 
     <SectionWrapper>
       <CarouselProducts />
