@@ -3,12 +3,15 @@ import { ViewTransitions } from "astro:transitions";
 import Footer from "./Footer.astro";
 import Header from "./Header.astro";
 import { ButtonFloating, ButtonFloatingContact } from "../components";
+import { LT_SETTINGS } from "../data-list";
 
 interface Props {
   title?: string;
 }
 
-const { title = "Proyectores Servitec" } = Astro.props;
+const { title = "Landing template - Servitec" } = Astro.props;
+
+const { META, BODY } = LT_SETTINGS;
 ---
 
 <!doctype html>
@@ -90,5 +93,5 @@ const { title = "Proyectores Servitec" } = Astro.props;
         }
       }
     </style>
-  </body>
+  </body><!--<GLOBAL STYLES>-->
 </html>
