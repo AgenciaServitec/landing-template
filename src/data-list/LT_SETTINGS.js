@@ -6,6 +6,7 @@ export const LT_SETTINGS = {
   PROJECT: {
     name: "Landing template - Servitec",
     logo: "./images/logo.webp",
+    favicon: "./images/logo.webp",
     slogan:
       "Estamos aquí para ayudarte a encontrar el proyector perfecto para tus necesidades. No dudes en ponerte en contacto con nosotros para obtener más información sobre nuestros productos y servicios.",
   },
@@ -17,12 +18,6 @@ export const LT_SETTINGS = {
       bg: "",
       color: "",
     },
-  },
-  META: {
-    title: "Landing Template",
-    logo: "./images/logo.png",
-    description:
-      "Estamos aquí para ayudarte a encontrar el proyector perfecto para tus necesidades. No dudes en ponerte en contacto con nosotros para obtener más información sobre nuestros productos y servicios.",
   },
   TOP_HEADER: {},
   HEADER: LT_HEADER,

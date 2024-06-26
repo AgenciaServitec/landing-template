@@ -1,3 +1,6 @@
 {
-  "SERVITEC_SALES_API_URL": "https://api-servitecsales.web.app"
+  "FORM_CONTACT": {
+    "hostname": "eces.pe",
+    "SERVITEC_SALES_API_URL": "https://api-servitecsales.web.app"
+  }
 }

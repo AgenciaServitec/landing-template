@@ -11,7 +11,7 @@ interface Props {
 
 const { title = "Landing template - Servitec" } = Astro.props;
 
-const { META, BODY } = LT_SETTINGS;
+const { PROJECT, BODY } = LT_SETTINGS;
 ---
 
 <!doctype html>
@@ -19,10 +19,7 @@ const { META, BODY } = LT_SETTINGS;
   <head>
     <meta charset="UTF-8" />
 
-    <meta
-      name="description"
-      content="Reparacion y mantenimiento de proyectores"
-    />
+    <meta name="description" content={PROJECT.slogan} />
     <meta
       name="keywords"
       content="reparacion, mantenimiento, proyectores, lamparas"
