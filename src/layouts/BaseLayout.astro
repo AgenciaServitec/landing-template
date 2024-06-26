@@ -9,9 +9,9 @@ interface Props {
   title?: string;
 }
 
-const { title = "Landing template - Servitec" } = Astro.props;
+const { PROJECT } = LT_SETTINGS;
 
-const { PROJECT, BODY } = LT_SETTINGS;
+const { title = PROJECT.name } = Astro.props;
 ---
 
 <!doctype html>
