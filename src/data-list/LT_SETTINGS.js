@@ -9,7 +9,7 @@ export const LT_SETTINGS = {
     favicon: "./images/logo.webp",
     slogan:
       "Estamos aquí para ayudarte a encontrar el proyector perfecto para tus necesidades. No dudes en ponerte en contacto con nosotros para obtener más información sobre nuestros productos y servicios.",
-    keywords: "",
+    keywords: "reparacion, mantenimiento, proyectores, lamparas",
   },
   UI_DESIGN: {
     COLORS: {

@@ -1,9 +1,13 @@
+import {config} from "../../data-list";
+
 export const POST = async ({ request }) => {
   const data = await request.formData();
   const name = data.get("name");
   const email = data.get("email");
   const phoneNumber = data.get("phoneNumber");
   const message = data.get("message");
+  const {SERVITEC_SALES_API_URL,hostname}= config.FORM_CONTACT;
+
 
   const fields = {
     name: "Nombres",
@@ -30,11 +34,11 @@ export const POST = async ({ request }) => {
         number: phoneNumber,
       },
       message,
-      hostname: "eces.pe",
+      hostname: hostname,
     },
   };
 
-  await fetch("https://api-servitecsales.web.app/emails/contact", {
+  await fetch(`${SERVITEC_SALES_API_URL}/emails/contact`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
