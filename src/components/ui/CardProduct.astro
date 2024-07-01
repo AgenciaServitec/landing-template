@@ -7,7 +7,7 @@ const { name, imagePath, imageAlt } = Astro.props;
 <article class="product">
   <a href="/contact">
     <div class="product__img">
-      <img src={imagePath} alt={imageAlt} />
+      <img src={imagePath} alt={imageAlt} aria-label="Producto"/>
     </div>
     {
       !isEmpty(name) && (
