@@ -6,6 +6,7 @@ const Drawer = ({ children, dataNavbar }) => {
   return (
     <>
       <button
+          aria-label="abrir menu"
         style={{ border: "none", background: "none" }}
         onClick={showDrawer}
       >
