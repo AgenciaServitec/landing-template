@@ -10,7 +10,7 @@ const {list = undefined } = Astro.props;
           !isEmpty(list) &&
           list.map((brands, index) => (
               <li key={index} class="brands-list__item">
-                <img src={brands.imageUrl} alt={brands.name} />
+                <img src={brands.imageUrl} alt={brands.name} width="150" height="100"/>
               </li>
           ))
       }
@@ -23,7 +23,7 @@ const {list = undefined } = Astro.props;
           !isEmpty(list) &&
           list.map((brands, index) => (
               <li key={index} class="brands-list__item">
-                <img src={brands.imageUrl} alt={brands.name} />
+                <img src={brands.imageUrl} alt={brands.name} width="150" height="100" />
               </li>
           ))
       }

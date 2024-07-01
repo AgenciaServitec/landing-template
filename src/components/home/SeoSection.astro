@@ -10,7 +10,7 @@ const { data } = Astro.props;
     <div class="seo-section__img">
       {
         !isEmpty(data.image.imageUrl) && (
-          <img src={data.image.imageUrl} alt={data.image.imageAlt} />
+          <img src={data.image.imageUrl} alt={data.image.imageAlt} width="200" height="150"  />
         )
       }
     </div>
@@ -69,10 +69,7 @@ const { data } = Astro.props;
     &__text {
       text-align: left;
       font-size: 1.2rem;
-      @media (max-width: 720px) {
-        text-align: center;
-        font-size: 1.2rem;
-      }
+
     }
   }
 </style>
